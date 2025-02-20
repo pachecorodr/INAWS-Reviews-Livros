@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        BookReviews
+    </header>
+    <section class="main">
+        <h1>Mais avaliados</h1>
+        <p>
+            Os livros mais avaliados em nosso site
+        </p>
+        <section class="books">
+        </section>
+        <button>Adicionar livro</button>
+    </section>
+
+    <div class="form-container" id="formContainer">
+        <h2>Cadastro do Livro</h2>
+        <form id="bookForm" action="">
+            <label for="nome">Nome do livro</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o nome do livro">
+
+            <label for="descricao">Descrição do livro</label>
+            <input type="text" id="descricao" name="descricao" placeholder="Digite a descrição do livro">
+
+            <label for="link">Link da imagem do livro</label>
+            <input type="text" id="link" name="link" placeholder="Digite o link da imagem do livro">
+
+            <div class="buttons">
+                <button type="submit" class="btn btn-save" id="btnSave" disabled>Salvar</button>
+                <button type="button" class="btn btn-close" id="btnClose">Fechar</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

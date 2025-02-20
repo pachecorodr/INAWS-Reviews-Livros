@@ -1,0 +1,276 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cinza: #546C70;
+  --azul: #E6F1F5;
+}
+
+header {
+  height: 5vh;
+  display: flex;
+  background-color: var(--cinza);
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  padding-left: 2rem;
+  color: white;
+  align-items: center;
+}
+
+body {
+  background-color: var(--azul);
+  color: black;
+}
+
+button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(66, 214, 66, 0.76);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+section {
+  margin: 5vh 0;
+  background-color: white;
+  min-height: 80vh;
+  border: none;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 5vh;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+section p {
+  font-size: 1.2rem;
+  color: rgb(102, 96, 96);
+}
+
+.books {
+  margin-top: 2rem;
+  display: flex;
+  gap: 3vw;
+  flex-wrap: wrap;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+  width: 25vw;
+  min-width: 300px;
+  max-width: 25vw;
+  border: 2px solid #ece8e8;
+  border-radius: 10px;
+  min-height: 350px;
+  gap: 1.5rem;
+}
+
+.book-content {
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Ajuste da imagem do livro */
+.b-img {
+  width: 30%;
+  height: auto;
+  object-fit: contain;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Ajuste do bloco de texto */
+.books-txt {
+  width: 60%;
+  text-align: left;
+}
+
+.b-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.main button {
+  position: absolute;
+  right: 30px;
+  top: 150px;
+}
+
+@keyframes desaparecer {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.disappear {
+  animation: desaparecer 0.5s ease forwards;
+}
+
+.appear {
+  animation: aparecer 0.5s ease backwards;
+}
+
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  display: none; /* Inicia oculto */
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-save {
+  background: #007BFF;
+  color: #fff;
+}
+
+.btn-save:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-close {
+  background: #6c757d;
+  color: #fff;
+}
+
+.btn-close:hover {
+  background: #5a6268;
+}
+
+button:disabled:hover {
+  cursor: disabled;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  filter: brightness(0.8);
+}
+
+/* Regras para a avaliação por estrelas */
+
+/* Para o container usado no formulário (id) */
+#starRating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+#starRating .star {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+  margin: 0 5px;
+}
+
+#starRating .star.hover,
+#starRating .star.selected {
+  color: #f5b301;
+}
+
+/* Para as estrelas dos livros renderizados (container com classe) */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.star-rating .star {
+  font-size: 2rem;
+  color: #ccc;
+  margin: 0 5px;
+}
+
+/* As estrelas selecionadas ou em hover nos livros */
+.star-rating .star.hover,
+.star-rating .star.selected {
+  color: #f5b301;
+  cursor: pointer;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
