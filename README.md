@@ -21,7 +21,7 @@ Para rodar esse projeto localmente, você precisará adicionar as seguintes vari
 
 ### 1. Clone o projeto
 ```bash
-git clone https://github.com/pachecorodr/INAWS-Reviews-Livros-api.git 
+git clone https://github.com/pachecorodr/INAWS-Reviews-Livros.git 
 ```
 ### 2. Entre no diretório do projeto
 ```bash
