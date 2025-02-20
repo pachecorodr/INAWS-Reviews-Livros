@@ -29,7 +29,7 @@ cd INAWS-Reviews-Livros
 ```
 ### 3. Construa uma imagem a partir do docker-compose.yaml
 ```bash
-docker-compose -f docker/docker-compose.yaml -p front_INAWS-Reviews-Livros up --build
+docker-compose -f docker/docker-compose.yaml -p front_inaws-reviews-livros up --build
 ```
 
 ## Relacionado 
