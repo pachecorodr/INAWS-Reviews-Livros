@@ -34,5 +34,5 @@ docker-compose -f docker/docker-compose.yaml -p front_INAWS-Reviews-Livros up --
 
 ## Relacionado 
 
-Segue a API do projeto
+Segue a API do projeto:
 https://github.com/pachecorodr/INAWS-Reviews-Livros-api
