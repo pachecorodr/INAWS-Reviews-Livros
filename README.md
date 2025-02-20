@@ -25,7 +25,7 @@ git clone https://github.com/pachecorodr/INAWS-Reviews-Livros.git
 ```
 ### 2. Entre no diretório do projeto
 ```bash
-cd INAWS-Reviews-Livros-api
+cd INAWS-Reviews-Livros
 ```
 ### 3. Construa uma imagem a partir do docker-compose.yaml
 ```bash
